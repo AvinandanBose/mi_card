@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +19,6 @@ class MyApp extends StatelessWidget {
 
 class _My_App extends StatefulWidget {
   const _My_App({Key? key}) : super(key: key);
-
   @override
   State<_My_App> createState() => _My_App_State();
 }
@@ -31,29 +29,90 @@ class _My_App_State extends State<_My_App> {
     return Scaffold(
       backgroundColor: Colors.teal.shade900,
       body: SafeArea(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
+        child: Column(children: <Widget>[
+          const CircleAvatar(
+            radius: 50.0,
+            backgroundImage: AssetImage('images/Photo.jpg'),
+          ),
+          const Text(
+            'Avinandan Bose',
+            style: TextStyle(
+              fontSize: 40.0,
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Pacifico',
+            ),
+          ),
+          Text(
+            'Android Developer',
+            style: TextStyle(
+              fontFamily: 'SourceSansPro',
+              fontSize: 20.0,
+              color: Colors.teal.shade100,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 2.5,
+            ),
+          ),
+         Container(
+           padding: const EdgeInsets.all(10.0),
+            color: Colors.white,
+            margin: const EdgeInsets.symmetric(
+                vertical: 10.0,
+                horizontal: 25.0,
+            ),
+            child: Row(
+              children:  <Widget>[
+                 Icon(
+                    Icons.phone,
+                  color: Colors.teal.shade900,
+                ),
+                const SizedBox(
+                  width: 10.0,
+                ),
+                Text(
+                  '+91 9999 9999 999',
+                  style: TextStyle(
+                    color: Colors.teal.shade900,
+                    fontSize: 20.0,
+                    fontFamily:'SourceSansPro',
+                  ),
+                ),
+              ],
+            ),
+          ),
 
-              //Stretched red container
-              Container(width: 100.0, height: 100.0, color: Colors.red,),
+          Container(
+            padding: const EdgeInsets.all(10.0),
+            color: Colors.white,
+            margin: const EdgeInsets.symmetric(
+              vertical: 10.0,
+              horizontal: 25.0,
+            ),
 
-              // A column of two containers
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(width: 100.0, height: 100.0, color: Colors.yellow,),
-                  Container(width: 100.0, height: 100.0, color: Colors.green,),
-                ],
-              ),
-
-              //Stretched blue container
-              Container(width: 100.0, height: 100.0, color: Colors.blue,),
-
-            ],
-          )
-      ),
+            child:Row(
+              children:  <Widget>[
+                Icon(
+                  Icons.email,
+                  color: Colors.teal.shade900,
+                ),
+                const SizedBox(
+                  width: 10.0,
+                ),
+                Text(
+                  'bose*****@email.com',
+                  style: TextStyle(
+                    fontSize: 20.0 ,
+                    color: Colors.teal.shade900,
+                    fontFamily:'SourceSansPro',
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+          ),
+          ),
     );
+
   }
 }
