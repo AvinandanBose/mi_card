@@ -1,6 +1,6 @@
-# mi_card
+# Mi Card
 
-A new Flutter project.
+A new Flutter project. This a project based on id card. 
 
 ## Getting Started
 
@@ -14,3 +14,5 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+![Screenshot (313)](https://user-images.githubusercontent.com/38869235/159018325-c50c2892-01f2-4d22-a835-6d69a8fed8d0.png)
